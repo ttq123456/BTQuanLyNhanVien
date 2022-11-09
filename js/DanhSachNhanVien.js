@@ -14,7 +14,7 @@ function DanhSachNhanVien(){
     }
 
     this.xoaNV = function(maNVXoa) {
-        var viTri = this.timNV(maNVXoa);
+        var viTri = this.timViTri(maNVXoa);
         if (viTri != -1) {
             this.mangNV.splice(viTri,1);
         }
