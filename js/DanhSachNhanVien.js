@@ -19,4 +19,24 @@ function DanhSachNhanVien(){
             this.mangNV.splice(viTri,1);
         }
     }
+
+    this.capNhatNV = function(nvCapNhat){
+        var viTri = this.timViTri(nvCapNhat.taiKhoan);
+        if (viTri != -1){
+            this.mangNV[viTri] = nvCapNhat;
+        }
+    }
+
+    this.timNhanVien = function(loai){
+        var mangKQ = [];
+        loai = loai.toLowerCase().replace(/\s/g,"");
+        this.mangNV.map(function(nv){
+            var loaiNVien = nv.loaiNV.toLowerCase().replace(/\s/g,"");
+            if (loai == loaiNVien) {
+                mangKQ.push(nv);
+            }
+        });
+
+        return mangKQ;
+    }
 }
