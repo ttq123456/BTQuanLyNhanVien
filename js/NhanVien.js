@@ -14,7 +14,7 @@ function NhanVien(taiKhoan,hoTen,email,matKhau,ngayLam,luongCoBan,chucVu,gioLam,
         if (this.chucVu == "Sếp" ) {
             this.tongLuong = this.luongCoBan * 3;
         }
-        else if (this/chucVu == "Trưởng phòng") {
+        else if (this.chucVu == "Trưởng phòng") {
             this.tongLuong = this.luongCoBan * 2;
         }
         else  this.tongLuong = this.luongCoBan;
